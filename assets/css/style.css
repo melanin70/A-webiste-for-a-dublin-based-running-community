@@ -56,6 +56,13 @@ h1, h2{
 }
 
 /* hero image */
+
+#hero-outer{
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+}
+
 #hero-img{
   height: 600px;
   width: 100%;
@@ -63,4 +70,20 @@ h1, h2{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
+  
+  /* animates zoom effect on loading page */
+  animation-name: hero-zoom;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+/* create the level of zoom for hero img  */
+@keyframes hero-zoom{
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.1);
+  }
 }
